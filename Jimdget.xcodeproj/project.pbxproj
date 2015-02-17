@@ -1,0 +1,812 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55CFCC91C2B9FC36294E8593 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 400BDF6BCC1E7FFDDA4936B2 /* libPods.a */; };
+		ED24F0AE1A8DC86600F108F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED24F0AD1A8DC86600F108F4 /* main.m */; };
+		ED24F0B11A8DC86600F108F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED24F0B01A8DC86600F108F4 /* AppDelegate.m */; };
+		ED24F0B41A8DC86600F108F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED24F0B31A8DC86600F108F4 /* ViewController.m */; };
+		ED24F0B71A8DC86600F108F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED24F0B51A8DC86600F108F4 /* Main.storyboard */; };
+		ED24F0B91A8DC86600F108F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED24F0B81A8DC86600F108F4 /* Images.xcassets */; };
+		ED24F0BC1A8DC86600F108F4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED24F0BA1A8DC86600F108F4 /* LaunchScreen.xib */; };
+		ED24F0C81A8DC86600F108F4 /* JimdgetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED24F0C71A8DC86600F108F4 /* JimdgetTests.m */; };
+		ED24F0D81A8DC8FD00F108F4 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED24F0D71A8DC8FD00F108F4 /* NotificationCenter.framework */; };
+		ED24F0DE1A8DC8FD00F108F4 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED24F0DD1A8DC8FD00F108F4 /* TodayViewController.m */; };
+		ED24F0E01A8DC8FD00F108F4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED24F0DF1A8DC8FD00F108F4 /* MainInterface.storyboard */; };
+		ED24F0E31A8DC8FD00F108F4 /* JMDStatsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ED24F0D51A8DC8FD00F108F4 /* JMDStatsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ED6F39D41A90793A000F23DA /* UIColor+MoreColor.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F39D31A90793A000F23DA /* UIColor+MoreColor.m */; };
+		ED6F39D51A90793A000F23DA /* UIColor+MoreColor.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F39D31A90793A000F23DA /* UIColor+MoreColor.m */; };
+		ED6F39D81A907FC0000F23DA /* JMDWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F39D71A907FC0000F23DA /* JMDWidgetView.m */; };
+		ED815DFB1A91952000A2450C /* RandomDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = ED815DFA1A91952000A2450C /* RandomDataProvider.m */; };
+		ED815E061A91EFFA00A2450C /* NSDate+Weekday.m in Sources */ = {isa = PBXBuildFile; fileRef = ED815E051A91EFFA00A2450C /* NSDate+Weekday.m */; };
+		ED815E071A91EFFA00A2450C /* NSDate+Weekday.m in Sources */ = {isa = PBXBuildFile; fileRef = ED815E051A91EFFA00A2450C /* NSDate+Weekday.m */; };
+		ED815E081A91EFFA00A2450C /* NSDate+Weekday.m in Sources */ = {isa = PBXBuildFile; fileRef = ED815E051A91EFFA00A2450C /* NSDate+Weekday.m */; };
+		ED960CF91A92315200F7AADC /* JMDGraphDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = ED960CF81A92315200F7AADC /* JMDGraphDataProvider.m */; };
+		ED960CFD1A9235E500F7AADC /* JMDGraphStyler.m in Sources */ = {isa = PBXBuildFile; fileRef = ED960CFC1A9235E500F7AADC /* JMDGraphStyler.m */; };
+		ED960CFE1A9235E500F7AADC /* JMDGraphStyler.m in Sources */ = {isa = PBXBuildFile; fileRef = ED960CFC1A9235E500F7AADC /* JMDGraphStyler.m */; };
+		EDE36B411A8F14B70037EA76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED24F0B31A8DC86600F108F4 /* ViewController.m */; };
+		EDE36B4B1A8F38190037EA76 /* JMDUserDefaultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE36B4A1A8F38190037EA76 /* JMDUserDefaultsManager.m */; };
+		EDE36B4C1A8F38190037EA76 /* JMDUserDefaultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE36B4A1A8F38190037EA76 /* JMDUserDefaultsManager.m */; };
+		EDE36B4D1A8F38190037EA76 /* JMDUserDefaultsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE36B4A1A8F38190037EA76 /* JMDUserDefaultsManager.m */; };
+		EDE36B511A8F3B2C0037EA76 /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE36B501A8F3B2C0037EA76 /* Const.m */; };
+		EDE36B521A8F3B2C0037EA76 /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE36B501A8F3B2C0037EA76 /* Const.m */; };
+		EDE36B531A8F3B2C0037EA76 /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE36B501A8F3B2C0037EA76 /* Const.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED24F0C21A8DC86600F108F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED24F0A01A8DC86600F108F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED24F0A71A8DC86600F108F4;
+			remoteInfo = Jimdget;
+		};
+		ED24F0E11A8DC8FD00F108F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED24F0A01A8DC86600F108F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED24F0D41A8DC8FD00F108F4;
+			remoteInfo = JMDStatsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ED24F0E71A8DC8FD00F108F4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				ED24F0E31A8DC8FD00F108F4 /* JMDStatsExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		400BDF6BCC1E7FFDDA4936B2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C96C06A1E3D2162ACA9885C3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		ED24F0A81A8DC86600F108F4 /* Jimdget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jimdget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED24F0AC1A8DC86600F108F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED24F0AD1A8DC86600F108F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED24F0AF1A8DC86600F108F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ED24F0B01A8DC86600F108F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ED24F0B21A8DC86600F108F4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		ED24F0B31A8DC86600F108F4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		ED24F0B61A8DC86600F108F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED24F0B81A8DC86600F108F4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ED24F0BB1A8DC86600F108F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		ED24F0C11A8DC86600F108F4 /* JimdgetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JimdgetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED24F0C61A8DC86600F108F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED24F0C71A8DC86600F108F4 /* JimdgetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JimdgetTests.m; sourceTree = "<group>"; };
+		ED24F0D51A8DC8FD00F108F4 /* JMDStatsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JMDStatsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED24F0D71A8DC8FD00F108F4 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		ED24F0DB1A8DC8FD00F108F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED24F0DC1A8DC8FD00F108F4 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		ED24F0DD1A8DC8FD00F108F4 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		ED24F0DF1A8DC8FD00F108F4 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		ED24F0E81A8E1A7E00F108F4 /* Jimdget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Jimdget.entitlements; sourceTree = "<group>"; };
+		ED24F0E91A8E1B3E00F108F4 /* JMDStatsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = JMDStatsExtension.entitlements; sourceTree = "<group>"; };
+		ED6F39D21A90793A000F23DA /* UIColor+MoreColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MoreColor.h"; sourceTree = "<group>"; };
+		ED6F39D31A90793A000F23DA /* UIColor+MoreColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MoreColor.m"; sourceTree = "<group>"; };
+		ED6F39D61A907FC0000F23DA /* JMDWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDWidgetView.h; sourceTree = "<group>"; };
+		ED6F39D71A907FC0000F23DA /* JMDWidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMDWidgetView.m; sourceTree = "<group>"; };
+		ED815DF91A91952000A2450C /* RandomDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomDataProvider.h; sourceTree = "<group>"; };
+		ED815DFA1A91952000A2450C /* RandomDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomDataProvider.m; sourceTree = "<group>"; };
+		ED815E041A91EFFA00A2450C /* NSDate+Weekday.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Weekday.h"; sourceTree = "<group>"; };
+		ED815E051A91EFFA00A2450C /* NSDate+Weekday.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Weekday.m"; sourceTree = "<group>"; };
+		ED960CF71A92315200F7AADC /* JMDGraphDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDGraphDataProvider.h; sourceTree = "<group>"; };
+		ED960CF81A92315200F7AADC /* JMDGraphDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMDGraphDataProvider.m; sourceTree = "<group>"; };
+		ED960CFB1A9235E500F7AADC /* JMDGraphStyler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDGraphStyler.h; sourceTree = "<group>"; };
+		ED960CFC1A9235E500F7AADC /* JMDGraphStyler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMDGraphStyler.m; sourceTree = "<group>"; };
+		EDE36B491A8F38190037EA76 /* JMDUserDefaultsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDUserDefaultsManager.h; sourceTree = "<group>"; };
+		EDE36B4A1A8F38190037EA76 /* JMDUserDefaultsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMDUserDefaultsManager.m; sourceTree = "<group>"; };
+		EDE36B4F1A8F3A810037EA76 /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
+		EDE36B501A8F3B2C0037EA76 /* Const.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Const.m; sourceTree = "<group>"; };
+		FEDC65ED15B53819455C59DD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED24F0A51A8DC86600F108F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55CFCC91C2B9FC36294E8593 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED24F0BE1A8DC86600F108F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED24F0D21A8DC8FD00F108F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED24F0D81A8DC8FD00F108F4 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C5E85726FED1C8B79D433AC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C96C06A1E3D2162ACA9885C3 /* Pods.debug.xcconfig */,
+				FEDC65ED15B53819455C59DD /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ED24F09F1A8DC86600F108F4 = {
+			isa = PBXGroup;
+			children = (
+				ED24F0AA1A8DC86600F108F4 /* Jimdget */,
+				ED24F0D91A8DC8FD00F108F4 /* JMDStatsExtension */,
+				EDE36B481A8F38190037EA76 /* Shared */,
+				ED24F0C41A8DC86600F108F4 /* JimdgetTests */,
+				ED24F0D61A8DC8FD00F108F4 /* Frameworks */,
+				ED24F0A91A8DC86600F108F4 /* Products */,
+				C5E85726FED1C8B79D433AC1 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		ED24F0A91A8DC86600F108F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED24F0A81A8DC86600F108F4 /* Jimdget.app */,
+				ED24F0C11A8DC86600F108F4 /* JimdgetTests.xctest */,
+				ED24F0D51A8DC8FD00F108F4 /* JMDStatsExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED24F0AA1A8DC86600F108F4 /* Jimdget */ = {
+			isa = PBXGroup;
+			children = (
+				ED24F0E81A8E1A7E00F108F4 /* Jimdget.entitlements */,
+				ED24F0AF1A8DC86600F108F4 /* AppDelegate.h */,
+				ED24F0B01A8DC86600F108F4 /* AppDelegate.m */,
+				ED24F0B21A8DC86600F108F4 /* ViewController.h */,
+				ED24F0B31A8DC86600F108F4 /* ViewController.m */,
+				ED815DF91A91952000A2450C /* RandomDataProvider.h */,
+				ED815DFA1A91952000A2450C /* RandomDataProvider.m */,
+				ED24F0B51A8DC86600F108F4 /* Main.storyboard */,
+				ED24F0B81A8DC86600F108F4 /* Images.xcassets */,
+				ED24F0BA1A8DC86600F108F4 /* LaunchScreen.xib */,
+				ED24F0AB1A8DC86600F108F4 /* Supporting Files */,
+			);
+			path = Jimdget;
+			sourceTree = "<group>";
+		};
+		ED24F0AB1A8DC86600F108F4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED24F0AC1A8DC86600F108F4 /* Info.plist */,
+				ED24F0AD1A8DC86600F108F4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED24F0C41A8DC86600F108F4 /* JimdgetTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED24F0C71A8DC86600F108F4 /* JimdgetTests.m */,
+				ED24F0C51A8DC86600F108F4 /* Supporting Files */,
+			);
+			path = JimdgetTests;
+			sourceTree = "<group>";
+		};
+		ED24F0C51A8DC86600F108F4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED24F0C61A8DC86600F108F4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED24F0D61A8DC8FD00F108F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED24F0D71A8DC8FD00F108F4 /* NotificationCenter.framework */,
+				400BDF6BCC1E7FFDDA4936B2 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED24F0D91A8DC8FD00F108F4 /* JMDStatsExtension */ = {
+			isa = PBXGroup;
+			children = (
+				ED24F0E91A8E1B3E00F108F4 /* JMDStatsExtension.entitlements */,
+				ED24F0DC1A8DC8FD00F108F4 /* TodayViewController.h */,
+				ED24F0DD1A8DC8FD00F108F4 /* TodayViewController.m */,
+				ED24F0DF1A8DC8FD00F108F4 /* MainInterface.storyboard */,
+				ED6F39D61A907FC0000F23DA /* JMDWidgetView.h */,
+				ED6F39D71A907FC0000F23DA /* JMDWidgetView.m */,
+				ED960CF61A92315200F7AADC /* Graphing */,
+				ED960CFA1A9235E500F7AADC /* Theming */,
+				ED24F0DA1A8DC8FD00F108F4 /* Supporting Files */,
+			);
+			path = JMDStatsExtension;
+			sourceTree = "<group>";
+		};
+		ED24F0DA1A8DC8FD00F108F4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED24F0DB1A8DC8FD00F108F4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED960CF61A92315200F7AADC /* Graphing */ = {
+			isa = PBXGroup;
+			children = (
+				ED960CF71A92315200F7AADC /* JMDGraphDataProvider.h */,
+				ED960CF81A92315200F7AADC /* JMDGraphDataProvider.m */,
+			);
+			path = Graphing;
+			sourceTree = "<group>";
+		};
+		ED960CFA1A9235E500F7AADC /* Theming */ = {
+			isa = PBXGroup;
+			children = (
+				ED960CFB1A9235E500F7AADC /* JMDGraphStyler.h */,
+				ED960CFC1A9235E500F7AADC /* JMDGraphStyler.m */,
+			);
+			path = Theming;
+			sourceTree = "<group>";
+		};
+		EDE36B481A8F38190037EA76 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				EDE36B491A8F38190037EA76 /* JMDUserDefaultsManager.h */,
+				EDE36B4A1A8F38190037EA76 /* JMDUserDefaultsManager.m */,
+				EDE36B4F1A8F3A810037EA76 /* Const.h */,
+				EDE36B501A8F3B2C0037EA76 /* Const.m */,
+				ED6F39D21A90793A000F23DA /* UIColor+MoreColor.h */,
+				ED6F39D31A90793A000F23DA /* UIColor+MoreColor.m */,
+				ED815E041A91EFFA00A2450C /* NSDate+Weekday.h */,
+				ED815E051A91EFFA00A2450C /* NSDate+Weekday.m */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED24F0A71A8DC86600F108F4 /* Jimdget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED24F0CB1A8DC86600F108F4 /* Build configuration list for PBXNativeTarget "Jimdget" */;
+			buildPhases = (
+				F735BAEFBA91444FF775C13A /* Check Pods Manifest.lock */,
+				ED24F0A41A8DC86600F108F4 /* Sources */,
+				ED24F0A51A8DC86600F108F4 /* Frameworks */,
+				ED24F0A61A8DC86600F108F4 /* Resources */,
+				ED24F0E71A8DC8FD00F108F4 /* Embed App Extensions */,
+				3E1412BF02E2FA8B5557026E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED24F0E21A8DC8FD00F108F4 /* PBXTargetDependency */,
+			);
+			name = Jimdget;
+			productName = Jimdget;
+			productReference = ED24F0A81A8DC86600F108F4 /* Jimdget.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED24F0C01A8DC86600F108F4 /* JimdgetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED24F0CE1A8DC86600F108F4 /* Build configuration list for PBXNativeTarget "JimdgetTests" */;
+			buildPhases = (
+				ED24F0BD1A8DC86600F108F4 /* Sources */,
+				ED24F0BE1A8DC86600F108F4 /* Frameworks */,
+				ED24F0BF1A8DC86600F108F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED24F0C31A8DC86600F108F4 /* PBXTargetDependency */,
+			);
+			name = JimdgetTests;
+			productName = JimdgetTests;
+			productReference = ED24F0C11A8DC86600F108F4 /* JimdgetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED24F0D41A8DC8FD00F108F4 /* JMDStatsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED24F0E41A8DC8FD00F108F4 /* Build configuration list for PBXNativeTarget "JMDStatsExtension" */;
+			buildPhases = (
+				ED24F0D11A8DC8FD00F108F4 /* Sources */,
+				ED24F0D21A8DC8FD00F108F4 /* Frameworks */,
+				ED24F0D31A8DC8FD00F108F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JMDStatsExtension;
+			productName = JMDStatsExtension;
+			productReference = ED24F0D51A8DC8FD00F108F4 /* JMDStatsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED24F0A01A8DC86600F108F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Bonsai Industries";
+				TargetAttributes = {
+					ED24F0A71A8DC86600F108F4 = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 7AG422FG2D;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					ED24F0C01A8DC86600F108F4 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = ED24F0A71A8DC86600F108F4;
+					};
+					ED24F0D41A8DC8FD00F108F4 = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 7AG422FG2D;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = ED24F0A31A8DC86600F108F4 /* Build configuration list for PBXProject "Jimdget" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED24F09F1A8DC86600F108F4;
+			productRefGroup = ED24F0A91A8DC86600F108F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED24F0A71A8DC86600F108F4 /* Jimdget */,
+				ED24F0C01A8DC86600F108F4 /* JimdgetTests */,
+				ED24F0D41A8DC8FD00F108F4 /* JMDStatsExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED24F0A61A8DC86600F108F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED24F0B71A8DC86600F108F4 /* Main.storyboard in Resources */,
+				ED24F0BC1A8DC86600F108F4 /* LaunchScreen.xib in Resources */,
+				ED24F0B91A8DC86600F108F4 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED24F0BF1A8DC86600F108F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED24F0D31A8DC8FD00F108F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED24F0E01A8DC8FD00F108F4 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E1412BF02E2FA8B5557026E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F735BAEFBA91444FF775C13A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED24F0A41A8DC86600F108F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED815DFB1A91952000A2450C /* RandomDataProvider.m in Sources */,
+				EDE36B511A8F3B2C0037EA76 /* Const.m in Sources */,
+				EDE36B4B1A8F38190037EA76 /* JMDUserDefaultsManager.m in Sources */,
+				ED24F0B41A8DC86600F108F4 /* ViewController.m in Sources */,
+				ED24F0B11A8DC86600F108F4 /* AppDelegate.m in Sources */,
+				ED6F39D41A90793A000F23DA /* UIColor+MoreColor.m in Sources */,
+				ED24F0AE1A8DC86600F108F4 /* main.m in Sources */,
+				ED815E061A91EFFA00A2450C /* NSDate+Weekday.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED24F0BD1A8DC86600F108F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE36B521A8F3B2C0037EA76 /* Const.m in Sources */,
+				EDE36B4C1A8F38190037EA76 /* JMDUserDefaultsManager.m in Sources */,
+				ED815E071A91EFFA00A2450C /* NSDate+Weekday.m in Sources */,
+				ED960CFD1A9235E500F7AADC /* JMDGraphStyler.m in Sources */,
+				ED24F0C81A8DC86600F108F4 /* JimdgetTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED24F0D11A8DC8FD00F108F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDE36B411A8F14B70037EA76 /* ViewController.m in Sources */,
+				EDE36B531A8F3B2C0037EA76 /* Const.m in Sources */,
+				ED815E081A91EFFA00A2450C /* NSDate+Weekday.m in Sources */,
+				ED960CFE1A9235E500F7AADC /* JMDGraphStyler.m in Sources */,
+				EDE36B4D1A8F38190037EA76 /* JMDUserDefaultsManager.m in Sources */,
+				ED960CF91A92315200F7AADC /* JMDGraphDataProvider.m in Sources */,
+				ED6F39D51A90793A000F23DA /* UIColor+MoreColor.m in Sources */,
+				ED24F0DE1A8DC8FD00F108F4 /* TodayViewController.m in Sources */,
+				ED6F39D81A907FC0000F23DA /* JMDWidgetView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED24F0C31A8DC86600F108F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED24F0A71A8DC86600F108F4 /* Jimdget */;
+			targetProxy = ED24F0C21A8DC86600F108F4 /* PBXContainerItemProxy */;
+		};
+		ED24F0E21A8DC8FD00F108F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED24F0D41A8DC8FD00F108F4 /* JMDStatsExtension */;
+			targetProxy = ED24F0E11A8DC8FD00F108F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED24F0B51A8DC86600F108F4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED24F0B61A8DC86600F108F4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED24F0BA1A8DC86600F108F4 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED24F0BB1A8DC86600F108F4 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED24F0C91A8DC86600F108F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C96C06A1E3D2162ACA9885C3 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ED24F0CA1A8DC86600F108F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEDC65ED15B53819455C59DD /* Pods.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED24F0CC1A8DC86600F108F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Jimdget/Jimdget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+					"\"${PODS_ROOT}/Headers/Public/BEMSimpleLineGraph\"",
+				);
+				INFOPLIST_FILE = Jimdget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DerivedData/Build/Products/Debug-iphonesimulator",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) \"${PODS_ROOT}/Headers/Public/BEMSimpleLineGraph\"";
+			};
+			name = Debug;
+		};
+		ED24F0CD1A8DC86600F108F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Jimdget/Jimdget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+					"\"${PODS_ROOT}/Headers/Public/BEMSimpleLineGraph\"",
+				);
+				INFOPLIST_FILE = Jimdget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DerivedData/Build/Products/Debug-iphonesimulator",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) \"${PODS_ROOT}/Headers/Public/BEMSimpleLineGraph\"";
+			};
+			name = Release;
+		};
+		ED24F0CF1A8DC86600F108F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JimdgetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jimdget.app/Jimdget";
+			};
+			name = Debug;
+		};
+		ED24F0D01A8DC86600F108F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = JimdgetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jimdget.app/Jimdget";
+			};
+			name = Release;
+		};
+		ED24F0E51A8DC8FD00F108F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C96C06A1E3D2162ACA9885C3 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = JMDStatsExtension/JMDStatsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+					"\"${PODS_ROOT}/Headers/Public/BEMSimpleLineGraph\"",
+				);
+				INFOPLIST_FILE = JMDStatsExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DerivedData/Build/Products/Debug-iphonesimulator",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(inherited) \"${PODS_ROOT}/Headers/Public/BEMSimpleLineGraph\"";
+			};
+			name = Debug;
+		};
+		ED24F0E61A8DC8FD00F108F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEDC65ED15B53819455C59DD /* Pods.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_ENTITLEMENTS = JMDStatsExtension/JMDStatsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+					"\"${PODS_ROOT}/Headers/Public/BEMSimpleLineGraph\"",
+				);
+				INFOPLIST_FILE = JMDStatsExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DerivedData/Build/Products/Debug-iphonesimulator",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "$(inherited) \"${PODS_ROOT}/Headers/Public/BEMSimpleLineGraph\"";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED24F0A31A8DC86600F108F4 /* Build configuration list for PBXProject "Jimdget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED24F0C91A8DC86600F108F4 /* Debug */,
+				ED24F0CA1A8DC86600F108F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED24F0CB1A8DC86600F108F4 /* Build configuration list for PBXNativeTarget "Jimdget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED24F0CC1A8DC86600F108F4 /* Debug */,
+				ED24F0CD1A8DC86600F108F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED24F0CE1A8DC86600F108F4 /* Build configuration list for PBXNativeTarget "JimdgetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED24F0CF1A8DC86600F108F4 /* Debug */,
+				ED24F0D01A8DC86600F108F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED24F0E41A8DC8FD00F108F4 /* Build configuration list for PBXNativeTarget "JMDStatsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED24F0E51A8DC8FD00F108F4 /* Debug */,
+				ED24F0E61A8DC8FD00F108F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED24F0A01A8DC86600F108F4 /* Project object */;
+}

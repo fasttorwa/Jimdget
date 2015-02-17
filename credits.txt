@@ -1,0 +1,4 @@
+Credits
+
+- CocoaPods
+- BEMSimpleLineGraph (MIT)

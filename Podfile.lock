@@ -1,0 +1,19 @@
+PODS:
+  - BEMSimpleLineGraph (3.3)
+
+DEPENDENCIES:
+  - BEMSimpleLineGraph (from `https://github.com/Boris-Em/BEMSimpleLineGraph.git`)
+
+EXTERNAL SOURCES:
+  BEMSimpleLineGraph:
+    :git: https://github.com/Boris-Em/BEMSimpleLineGraph.git
+
+CHECKOUT OPTIONS:
+  BEMSimpleLineGraph:
+    :commit: b3f428830f6bc05164b0cf5e362d6ae597e0a03b
+    :git: https://github.com/Boris-Em/BEMSimpleLineGraph.git
+
+SPEC CHECKSUMS:
+  BEMSimpleLineGraph: a3c78bfd5d2919324d970e42c028ebffc6ad7bcd
+
+COCOAPODS: 0.35.0
