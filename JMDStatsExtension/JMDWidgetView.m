@@ -29,6 +29,7 @@
 {
     [super didMoveToSuperview];
     [self setup];
+
     [self reload];
 }
 
@@ -39,6 +40,7 @@
     
     self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget: self action: @selector(recognizedTap)];
     [self addGestureRecognizer: self.tapRecognizer];
+    self.bothGraphsVisible = YES;
 }
 
 
@@ -99,16 +101,15 @@
     
     self.hitsGraphView.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview: self.hitsGraphView];
-    self.bothGraphsVisible = NO;
-    self.hitsGraphView.hidden = YES;
     
+    UIEdgeInsets insets = [self hitsGraphMiniEdgeInsets];
     self.hitsGraphConstraints = @[ [NSLayoutConstraint constraintWithItem: self.hitsGraphView
                                                                 attribute: NSLayoutAttributeTop
                                                                 relatedBy: NSLayoutRelationEqual
                                                                    toItem: self
                                                                 attribute: NSLayoutAttributeTop
                                                                multiplier: 1.0
-                                                                 constant: 0.0],
+                                                                 constant: insets.top],
                                    
                                    [NSLayoutConstraint constraintWithItem: self.hitsGraphView
                                                                 attribute: NSLayoutAttributeLeft
@@ -116,7 +117,7 @@
                                                                    toItem: self
                                                                 attribute: NSLayoutAttributeLeft
                                                                multiplier: 1.0
-                                                                 constant: 0.0],
+                                                                 constant: insets.left],
                                    
                                    [NSLayoutConstraint constraintWithItem: self.hitsGraphView
                                                                 attribute: NSLayoutAttributeBottom
@@ -124,7 +125,7 @@
                                                                    toItem: self
                                                                 attribute: NSLayoutAttributeBottom
                                                                multiplier: 1.0
-                                                                 constant: 0.0],
+                                                                 constant: insets.bottom],
                                    
                                    [NSLayoutConstraint constraintWithItem: self.hitsGraphView
                                                                 attribute: NSLayoutAttributeRight
@@ -132,7 +133,7 @@
                                                                    toItem: self
                                                                 attribute: NSLayoutAttributeRight
                                                                multiplier: 1.0
-                                                                 constant: 0.0]
+                                                                 constant: insets.right]
                                    
                                    ];
     [self addConstraints: self.hitsGraphConstraints];
@@ -152,13 +153,14 @@
     self.visitsGraphView.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview: self.visitsGraphView];
     
+    UIEdgeInsets insets = [self visitsGraphMiniEdgeInsets];
     self.visitsGraphConstraints = @[ [NSLayoutConstraint constraintWithItem: self.visitsGraphView
                                                                   attribute: NSLayoutAttributeTop
                                                                   relatedBy: NSLayoutRelationEqual
                                                                      toItem: self
                                                                   attribute: NSLayoutAttributeTop
                                                                  multiplier: 1.0
-                                                                   constant: 0.0],
+                                                                   constant: insets.top],
                                      
                                      [NSLayoutConstraint constraintWithItem: self.visitsGraphView
                                                                   attribute: NSLayoutAttributeLeft
@@ -166,7 +168,7 @@
                                                                      toItem: self
                                                                   attribute: NSLayoutAttributeLeft
                                                                  multiplier: 1.0
-                                                                   constant: 0.0],
+                                                                   constant: insets.left],
                                      
                                      [NSLayoutConstraint constraintWithItem: self.visitsGraphView
                                                                   attribute: NSLayoutAttributeBottom
@@ -174,7 +176,7 @@
                                                                      toItem: self
                                                                   attribute: NSLayoutAttributeBottom
                                                                  multiplier: 1.0
-                                                                   constant: 0.0],
+                                                                   constant: insets.bottom],
                                      
                                      [NSLayoutConstraint constraintWithItem: self.visitsGraphView
                                                                   attribute: NSLayoutAttributeRight
@@ -182,7 +184,7 @@
                                                                      toItem: self
                                                                   attribute: NSLayoutAttributeRight
                                                                  multiplier: 1.0
-                                                                   constant: 0.0]
+                                                                   constant: insets.right]
                                      
                                      ];
     [self addConstraints: self.visitsGraphConstraints];
@@ -197,8 +199,8 @@
     self.visitsGraphView.hidden = NO;
     self.hitsGraphView.hidden = NO;
     
-    [self applyInsets: UIEdgeInsetsMake(40, 5, -40, -(self.bounds.size.width / 2) - 10) toGraphConstraints: self.visitsGraphConstraints];
-    [self applyInsets: UIEdgeInsetsMake(40, (self.bounds.size.width / 2) + 10, -40, -5) toGraphConstraints: self.hitsGraphConstraints];
+    [self applyInsets: [self visitsGraphMiniEdgeInsets] toGraphConstraints: self.visitsGraphConstraints];
+    [self applyInsets: [self hitsGraphMiniEdgeInsets] toGraphConstraints: self.hitsGraphConstraints];
     [self layoutIfNeeded];
 }
 
@@ -209,8 +211,8 @@
     self.visitsGraphView.hidden = (graphView == self.visitsGraphView) ?  NO : YES;
     self.hitsGraphView.hidden = !self.visitsGraphView.hidden;
     
-    [self applyInsets: UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0) toGraphConstraints: self.hitsGraphConstraints];
-    [self applyInsets: UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0) toGraphConstraints: self.visitsGraphConstraints];
+    [self applyInsets: [self graphFullInsets] toGraphConstraints: self.hitsGraphConstraints];
+    [self applyInsets: [self graphFullInsets] toGraphConstraints: self.visitsGraphConstraints];
     [self layoutIfNeeded];
 }
 
@@ -224,6 +226,26 @@
 }
 
 
+# pragma mark - Insets
+
+- (UIEdgeInsets)visitsGraphMiniEdgeInsets
+{
+    return UIEdgeInsetsMake(40, 5, -40, -([UIScreen mainScreen].bounds.size.width / 2) - 10);
+}
+
+
+- (UIEdgeInsets)hitsGraphMiniEdgeInsets
+{
+    return UIEdgeInsetsMake(40, ([UIScreen mainScreen].bounds.size.width / 2) + 10, -40, -5);
+}
+
+
+- (UIEdgeInsets)graphFullInsets
+{
+    return UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0);
+}
+
+
 # pragma mark - Tap Recognition
 
 - (void)recognizedTap
@@ -232,7 +254,7 @@
     
     if (self.bothGraphsVisible)
     {
-        if (location.x < self.bounds.size.width / 2)
+        if (location.x < [UIScreen mainScreen].bounds.size.width / 2)
         {
             [self showFullGraph: self.visitsGraphView];
         }

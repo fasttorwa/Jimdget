@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JMDStatsExtension/JMDWidgetView.m"
-            timestampString = "445851439.350547"
+            timestampString = "445872558.239828"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
             landmarkName = "-recognizedTap"
             landmarkType = "5">
          </BreakpointContent>
