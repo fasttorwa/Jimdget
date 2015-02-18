@@ -55,7 +55,7 @@
         0.9, 0.8, 1.0, 0.0
     };
     graphView.gradientBottom = CGGradientCreateWithColorComponents(colorspace, components, locations, num_locations);
-    CGColorSpaceRelease(colorspace);
+    CGColorSpaceRelease(colorspace); // clang: false positive?
     
     return graphView;
 }
@@ -63,9 +63,9 @@
 
 + (NSArray *)stylesArray
 {
-    // not complete, see BEMSimpleLineGraphView for more properties
+    // not complete, see BEMSimpleLineGraphView.h for more properties
     return @[
-                // ===== Default Style =====
+                // ===== Default/Hits Style =====
                 @{
                     // Area above graph
                     @"alphaTop"                     : @0.0,
@@ -79,7 +79,7 @@
                     @"alwaysDisplayDots"            : @YES,
                     @"colorLine"                    : [UIColor whiteColor],
                     @"colorXaxisLabel"              : [UIColor lightGrayColor],
-                    @"colorYaxisLabel"              : [UIColor lightGrayColor],
+                    @"colorYaxisLabel"              : [UIColor whiteColor],
                     
                     // Axis
                     @"enableYAxisLabel"             : @YES,

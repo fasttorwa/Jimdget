@@ -14,7 +14,7 @@
 		ED24F0B71A8DC86600F108F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED24F0B51A8DC86600F108F4 /* Main.storyboard */; };
 		ED24F0B91A8DC86600F108F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED24F0B81A8DC86600F108F4 /* Images.xcassets */; };
 		ED24F0BC1A8DC86600F108F4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED24F0BA1A8DC86600F108F4 /* LaunchScreen.xib */; };
-		ED24F0C81A8DC86600F108F4 /* JimdgetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED24F0C71A8DC86600F108F4 /* JimdgetTests.m */; };
+		ED24F0C81A8DC86600F108F4 /* UserDefaultsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED24F0C71A8DC86600F108F4 /* UserDefaultsTests.m */; };
 		ED24F0D81A8DC8FD00F108F4 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED24F0D71A8DC8FD00F108F4 /* NotificationCenter.framework */; };
 		ED24F0DE1A8DC8FD00F108F4 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED24F0DD1A8DC8FD00F108F4 /* TodayViewController.m */; };
 		ED24F0E01A8DC8FD00F108F4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED24F0DF1A8DC8FD00F108F4 /* MainInterface.storyboard */; };
@@ -84,7 +84,7 @@
 		ED24F0BB1A8DC86600F108F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		ED24F0C11A8DC86600F108F4 /* JimdgetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JimdgetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED24F0C61A8DC86600F108F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED24F0C71A8DC86600F108F4 /* JimdgetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JimdgetTests.m; sourceTree = "<group>"; };
+		ED24F0C71A8DC86600F108F4 /* UserDefaultsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsTests.m; sourceTree = "<group>"; };
 		ED24F0D51A8DC8FD00F108F4 /* JMDStatsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JMDStatsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED24F0D71A8DC8FD00F108F4 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		ED24F0DB1A8DC8FD00F108F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 		ED24F0C41A8DC86600F108F4 /* JimdgetTests */ = {
 			isa = PBXGroup;
 			children = (
-				ED24F0C71A8DC86600F108F4 /* JimdgetTests.m */,
+				ED24F0C71A8DC86600F108F4 /* UserDefaultsTests.m */,
 				ED24F0C51A8DC86600F108F4 /* Supporting Files */,
 			);
 			path = JimdgetTests;
@@ -478,7 +478,7 @@
 				EDE36B4C1A8F38190037EA76 /* JMDUserDefaultsManager.m in Sources */,
 				ED815E071A91EFFA00A2450C /* NSDate+Weekday.m in Sources */,
 				ED960CFD1A9235E500F7AADC /* JMDGraphStyler.m in Sources */,
-				ED24F0C81A8DC86600F108F4 /* JimdgetTests.m in Sources */,
+				ED24F0C81A8DC86600F108F4 /* UserDefaultsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

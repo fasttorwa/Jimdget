@@ -31,6 +31,13 @@ NSString *const kBundleTypeApp          = @"APPL";
 }
 
 
++ (void)removeObjectForKey: (NSString *)key fromStore: (UserDefaultsStore)storeType
+{
+    NSUserDefaults *userDefaults = [self defaultsStoreWithType: storeType];
+    [userDefaults removeObjectForKey: key];
+}
+
+
 #pragma mark - private
 
 + (NSUserDefaults *)defaultsStoreWithType: (UserDefaultsStore)storeType

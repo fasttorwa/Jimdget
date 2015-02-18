@@ -19,5 +19,6 @@ typedef NS_ENUM(NSInteger, UserDefaultsStore) {
 
 + (BOOL)setObject: (id)object forKey: (NSString *)key toStore: (UserDefaultsStore)storeType;
 + (id)objectForKey: (NSString *)key fromStore: (UserDefaultsStore)storeType;
++ (void)removeObjectForKey: (NSString *)key fromStore: (UserDefaultsStore)storeType;
 
 @end
