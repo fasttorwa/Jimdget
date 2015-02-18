@@ -7,7 +7,12 @@
 		<key>Pods-BEMSimpleLineGraph.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<true/>
+			<false/>
+		</dict>
+		<key>Pods-Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
@@ -22,7 +27,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3E2852DAA24B9514EFFB8DC3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7B462FB4649F3B7D70AAD0EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A626F3B1BC7DB7EC03577786</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D91B3A606FD546F284B79D90</key>
 		<dict>
 			<key>primary</key>
 			<true/>

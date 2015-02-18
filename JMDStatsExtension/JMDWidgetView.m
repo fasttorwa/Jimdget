@@ -8,6 +8,7 @@
 
 #import "JMDWidgetView.h"
 
+#import "View+MASAdditions.h"
 #import "JMDGraphStyler.h"
 
 
@@ -36,8 +37,6 @@
 
 - (void)setup
 {
-    self.translatesAutoresizingMaskIntoConstraints = NO;
-    
     self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget: self action: @selector(recognizedTap)];
     [self addGestureRecognizer: self.tapRecognizer];
     self.bothGraphsVisible = YES;
@@ -54,39 +53,10 @@
 
 - (void)layoutSelf
 {
-    [self.superview addConstraints: @[[NSLayoutConstraint constraintWithItem: self
-                                                                   attribute: NSLayoutAttributeTop
-                                                                   relatedBy: NSLayoutRelationEqual
-                                                                      toItem: self.superview
-                                                                   attribute: NSLayoutAttributeTop
-                                                                  multiplier: 1.0
-                                                                    constant: 0.0],
-                                      
-                                      [NSLayoutConstraint constraintWithItem: self
-                                                                   attribute: NSLayoutAttributeLeft
-                                                                   relatedBy: NSLayoutRelationEqual
-                                                                      toItem: self.superview
-                                                                   attribute: NSLayoutAttributeLeft
-                                                                  multiplier: 1.0
-                                                                    constant: 10.0],
-                                      
-                                      [NSLayoutConstraint constraintWithItem: self
-                                                                   attribute: NSLayoutAttributeBottom
-                                                                   relatedBy: NSLayoutRelationEqual
-                                                                      toItem: self.superview
-                                                                   attribute: NSLayoutAttributeBottom
-                                                                  multiplier: 1.0
-                                                                    constant: 0.0],
-                                      
-                                      [NSLayoutConstraint constraintWithItem: self
-                                                                   attribute: NSLayoutAttributeRight
-                                                                   relatedBy: NSLayoutRelationEqual
-                                                                      toItem: self.superview
-                                                                   attribute: NSLayoutAttributeRight
-                                                                  multiplier: 1.0
-                                                                    constant: -10.0]
-                                      ]
-     ];
+    UIEdgeInsets padding = UIEdgeInsetsMake(0, 10, 0, 10);
+    [self mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.superview).with.insets(padding);
+    }];
 }
 
 
