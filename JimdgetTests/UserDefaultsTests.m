@@ -32,6 +32,9 @@ NSString *const kUserDefaultsTestObj = @"userDefaultsTestObj";
 
 - (void)tearDown
 {
+    [JMDUserDefaultsManager removeObjectForKey: kUserDefaultsTestKey fromStore: UserDefaultsStoreStandard];
+    [JMDUserDefaultsManager removeObjectForKey: kUserDefaultsTestKey fromStore: UserDefaultsStoreAppGroup];
+    
     [super tearDown];
 }
 

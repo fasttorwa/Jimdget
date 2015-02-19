@@ -9,6 +9,7 @@
 #import "JMDWidgetView.h"
 
 #import "View+MASAdditions.h"
+#import "View+MASShorthandAdditions.h"
 #import "JMDGraphStyler.h"
 
 
@@ -25,6 +26,7 @@
 
 
 @implementation JMDWidgetView
+
 
 - (void)didMoveToSuperview
 {
@@ -45,16 +47,19 @@
 
 - (void)reload
 {
-    [self layoutSelf];
-    [self layoutHitsGraphView];
-    [self layoutVisitsGraphView];
+    if (self.superview) // to prevent from reloading when notification center is being closed
+    {
+        [self layoutSelf];
+        [self layoutHitsGraphView];
+        [self layoutVisitsGraphView];
+    }
 }
 
 
 - (void)layoutSelf
 {
     UIEdgeInsets padding = UIEdgeInsetsMake(0, 10, 0, 10);
-    [self mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self mas_updateConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.superview).with.insets(padding);
     }];
 }
@@ -62,127 +67,79 @@
 
 - (void)layoutHitsGraphView
 {
-    [self.hitsGraphView removeFromSuperview];
-    self.hitsGraphView = [[BEMSimpleLineGraphView alloc] initWithFrame: CGRectZero];
-    self.hitsGraphView.delegate = self.hitsGraphDataProvider;
-    self.hitsGraphView.dataSource = self.hitsGraphDataProvider;
+    if (!self.hitsGraphView)
+    {
+        self.hitsGraphView = [[BEMSimpleLineGraphView alloc] initWithFrame: CGRectZero];
+        self.hitsGraphView.delegate = self.hitsGraphDataProvider;
+        self.hitsGraphView.dataSource = self.hitsGraphDataProvider;
+        [self addSubview: self.hitsGraphView];
+        
+        UIEdgeInsets padding = [self wrapped_hitsGraphMiniEdgeInsets];
+        [self.hitsGraphView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self).with.insets(padding);
+        }];
+    }
     
     [JMDGraphStyler styledGraph: self.hitsGraphView withStyle: GraphStyleHits];
-    
-    self.hitsGraphView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addSubview: self.hitsGraphView];
-    
-    UIEdgeInsets insets = [self hitsGraphMiniEdgeInsets];
-    self.hitsGraphConstraints = @[ [NSLayoutConstraint constraintWithItem: self.hitsGraphView
-                                                                attribute: NSLayoutAttributeTop
-                                                                relatedBy: NSLayoutRelationEqual
-                                                                   toItem: self
-                                                                attribute: NSLayoutAttributeTop
-                                                               multiplier: 1.0
-                                                                 constant: insets.top],
-                                   
-                                   [NSLayoutConstraint constraintWithItem: self.hitsGraphView
-                                                                attribute: NSLayoutAttributeLeft
-                                                                relatedBy: NSLayoutRelationEqual
-                                                                   toItem: self
-                                                                attribute: NSLayoutAttributeLeft
-                                                               multiplier: 1.0
-                                                                 constant: insets.left],
-                                   
-                                   [NSLayoutConstraint constraintWithItem: self.hitsGraphView
-                                                                attribute: NSLayoutAttributeBottom
-                                                                relatedBy: NSLayoutRelationEqual
-                                                                   toItem: self
-                                                                attribute: NSLayoutAttributeBottom
-                                                               multiplier: 1.0
-                                                                 constant: insets.bottom],
-                                   
-                                   [NSLayoutConstraint constraintWithItem: self.hitsGraphView
-                                                                attribute: NSLayoutAttributeRight
-                                                                relatedBy: NSLayoutRelationEqual
-                                                                   toItem: self
-                                                                attribute: NSLayoutAttributeRight
-                                                               multiplier: 1.0
-                                                                 constant: insets.right]
-                                   
-                                   ];
-    [self addConstraints: self.hitsGraphConstraints];
-
 }
 
 
 - (void)layoutVisitsGraphView
 {
-    [self.visitsGraphView removeFromSuperview];
-    self.visitsGraphView = [[BEMSimpleLineGraphView alloc] initWithFrame: CGRectZero];
-    self.visitsGraphView.delegate = self.visitsGraphDataProvider;
-    self.visitsGraphView.dataSource = self.visitsGraphDataProvider;
+    if (!self.visitsGraphView)
+    {
+        self.visitsGraphView = [[BEMSimpleLineGraphView alloc] initWithFrame: CGRectZero];
+        self.visitsGraphView.delegate = self.visitsGraphDataProvider;
+        self.visitsGraphView.dataSource = self.visitsGraphDataProvider;
+        [self addSubview: self.visitsGraphView];
+        
+        UIEdgeInsets padding = [self wrapped_visitsGraphMiniEdgeInsets];
+        [self.visitsGraphView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self).with.insets(padding);
+        }];
+    }
     
     [JMDGraphStyler styledGraph: self.visitsGraphView withStyle: GraphStyleVisits];
-    
-    self.visitsGraphView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addSubview: self.visitsGraphView];
-    
-    UIEdgeInsets insets = [self visitsGraphMiniEdgeInsets];
-    self.visitsGraphConstraints = @[ [NSLayoutConstraint constraintWithItem: self.visitsGraphView
-                                                                  attribute: NSLayoutAttributeTop
-                                                                  relatedBy: NSLayoutRelationEqual
-                                                                     toItem: self
-                                                                  attribute: NSLayoutAttributeTop
-                                                                 multiplier: 1.0
-                                                                   constant: insets.top],
-                                     
-                                     [NSLayoutConstraint constraintWithItem: self.visitsGraphView
-                                                                  attribute: NSLayoutAttributeLeft
-                                                                  relatedBy: NSLayoutRelationEqual
-                                                                     toItem: self
-                                                                  attribute: NSLayoutAttributeLeft
-                                                                 multiplier: 1.0
-                                                                   constant: insets.left],
-                                     
-                                     [NSLayoutConstraint constraintWithItem: self.visitsGraphView
-                                                                  attribute: NSLayoutAttributeBottom
-                                                                  relatedBy: NSLayoutRelationEqual
-                                                                     toItem: self
-                                                                  attribute: NSLayoutAttributeBottom
-                                                                 multiplier: 1.0
-                                                                   constant: insets.bottom],
-                                     
-                                     [NSLayoutConstraint constraintWithItem: self.visitsGraphView
-                                                                  attribute: NSLayoutAttributeRight
-                                                                  relatedBy: NSLayoutRelationEqual
-                                                                     toItem: self
-                                                                  attribute: NSLayoutAttributeRight
-                                                                 multiplier: 1.0
-                                                                   constant: insets.right]
-                                     
-                                     ];
-    [self addConstraints: self.visitsGraphConstraints];
 }
 
 
 # pragma mark - Dynamics
 
-- (void)showBothGraphs
+- (void)wrapped_showBothGraphs
 {
     self.bothGraphsVisible = YES;
     self.visitsGraphView.hidden = NO;
     self.hitsGraphView.hidden = NO;
     
-    [self applyInsets: [self visitsGraphMiniEdgeInsets] toGraphConstraints: self.visitsGraphConstraints];
-    [self applyInsets: [self hitsGraphMiniEdgeInsets] toGraphConstraints: self.hitsGraphConstraints];
+    UIEdgeInsets hitsPadding = [self wrapped_hitsGraphMiniEdgeInsets];
+    [self.hitsGraphView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self).with.insets(hitsPadding);
+    }];
+    
+    UIEdgeInsets visitsPadding = [self wrapped_visitsGraphMiniEdgeInsets];
+    [self.visitsGraphView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self).with.insets(visitsPadding);
+    }];
+    
+    [self setNeedsUpdateConstraints];
+    [self updateConstraintsIfNeeded];
     [self layoutIfNeeded];
 }
 
 
-- (void)showFullGraph: (BEMSimpleLineGraphView *)graphView
+- (void)wrapped_showFullGraph: (BEMSimpleLineGraphView *)graphView
 {
     self.bothGraphsVisible = NO;
-    self.visitsGraphView.hidden = (graphView == self.visitsGraphView) ?  NO : YES;
+    self.visitsGraphView.hidden = !(graphView == self.visitsGraphView);
     self.hitsGraphView.hidden = !self.visitsGraphView.hidden;
     
-    [self applyInsets: [self graphFullInsets] toGraphConstraints: self.hitsGraphConstraints];
-    [self applyInsets: [self graphFullInsets] toGraphConstraints: self.visitsGraphConstraints];
+    UIEdgeInsets padding = [self wrapped_graphFullInsets];
+    [graphView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self).with.insets(padding);
+    }];
+
+    [self setNeedsUpdateConstraints];
+    [self updateConstraintsIfNeeded];
     [self layoutIfNeeded];
 }
 
@@ -198,19 +155,19 @@
 
 # pragma mark - Insets
 
-- (UIEdgeInsets)visitsGraphMiniEdgeInsets
+- (UIEdgeInsets)wrapped_visitsGraphMiniEdgeInsets
 {
-    return UIEdgeInsetsMake(40, 5, -40, -([UIScreen mainScreen].bounds.size.width / 2) - 10);
+    return UIEdgeInsetsMake(40, 5, 40, +([UIScreen mainScreen].bounds.size.width / 2) + 10);
 }
 
 
-- (UIEdgeInsets)hitsGraphMiniEdgeInsets
+- (UIEdgeInsets)wrapped_hitsGraphMiniEdgeInsets
 {
-    return UIEdgeInsetsMake(40, ([UIScreen mainScreen].bounds.size.width / 2) + 10, -40, -5);
+    return UIEdgeInsetsMake(40, ([UIScreen mainScreen].bounds.size.width / 2) + 10, 40, 5);
 }
 
 
-- (UIEdgeInsets)graphFullInsets
+- (UIEdgeInsets)wrapped_graphFullInsets
 {
     return UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0);
 }
@@ -226,16 +183,16 @@
     {
         if (location.x < [UIScreen mainScreen].bounds.size.width / 2)
         {
-            [self showFullGraph: self.visitsGraphView];
+            [self wrapped_showFullGraph: self.visitsGraphView];
         }
         else
         {
-            [self showFullGraph: self.hitsGraphView];
+            [self wrapped_showFullGraph: self.hitsGraphView];
         }
     }
     else
     {
-        [self showBothGraphs];
+        [self wrapped_showBothGraphs];
     }
 }
 

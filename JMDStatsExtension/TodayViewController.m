@@ -41,16 +41,10 @@
         self.hitsGraphDataProvider.pointValues = [JMDUserDefaultsManager objectForKey: keys[0] fromStore: UserDefaultsStoreAppGroup];
         self.visitsGraphDataProvider.pointValues = [JMDUserDefaultsManager objectForKey: keys[1] fromStore: UserDefaultsStoreAppGroup];
     }
-    
+
     self.widgetView = [JMDWidgetView new];
     self.widgetView.hitsGraphDataProvider = self.hitsGraphDataProvider;
     self.widgetView.visitsGraphDataProvider = self.visitsGraphDataProvider;
-}
-
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear: animated];
     [self.view addSubview: self.widgetView];
 }
 

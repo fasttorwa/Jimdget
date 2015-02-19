@@ -13,8 +13,8 @@
 
 @interface JMDWidgetView : UIView
 
-@property (nonatomic) id<BEMSimpleLineGraphDelegate, BEMSimpleLineGraphDataSource> hitsGraphDataProvider;
-@property (nonatomic) id<BEMSimpleLineGraphDelegate, BEMSimpleLineGraphDataSource> visitsGraphDataProvider;
+@property (nonatomic, weak) id<BEMSimpleLineGraphDelegate, BEMSimpleLineGraphDataSource> hitsGraphDataProvider;
+@property (nonatomic, weak) id<BEMSimpleLineGraphDelegate, BEMSimpleLineGraphDataSource> visitsGraphDataProvider;
 
 - (void)reload;
 
