@@ -31,9 +31,12 @@
 - (void)didMoveToSuperview
 {
     [super didMoveToSuperview];
-    [self setup];
-
-    [self reload];
+    
+    if (self.superview) // to prevent from reloading when notification center is being closed
+    {
+        [self setup];
+        [self reload];
+    }
 }
 
 
@@ -47,12 +50,9 @@
 
 - (void)reload
 {
-    if (self.superview) // to prevent from reloading when notification center is being closed
-    {
-        [self layoutSelf];
-        [self layoutHitsGraphView];
-        [self layoutVisitsGraphView];
-    }
+    [self layoutSelf];
+    [self layoutHitsGraphView];
+    [self layoutVisitsGraphView];
 }
 
 

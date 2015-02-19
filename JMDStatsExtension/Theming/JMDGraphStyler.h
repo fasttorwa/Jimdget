@@ -10,6 +10,11 @@
 
 #import "BEMSimpleLineGraphView.h"
 
+
+NSString *const kGraphStyleHits;
+NSString *const kGraphStyleVisits;
+
+
 typedef NS_ENUM(NSInteger, GraphStyle) {
     GraphStyleHits,
     GraphStyleVisits
@@ -19,6 +24,7 @@ typedef NS_ENUM(NSInteger, GraphStyle) {
 @interface JMDGraphStyler : NSObject
 
 + (BEMSimpleLineGraphView *)styledGraph: (BEMSimpleLineGraphView *)graphView withStyle: (GraphStyle)style;
++ (NSDictionary *)stylesMap;
 
 
 @end

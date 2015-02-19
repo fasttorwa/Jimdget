@@ -36,6 +36,7 @@
 		EDE36B511A8F3B2C0037EA76 /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE36B501A8F3B2C0037EA76 /* Const.m */; };
 		EDE36B521A8F3B2C0037EA76 /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE36B501A8F3B2C0037EA76 /* Const.m */; };
 		EDE36B531A8F3B2C0037EA76 /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE36B501A8F3B2C0037EA76 /* Const.m */; };
+		EDE95F791A95BFD100726ACF /* GraphStylerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE95F781A95BFD100726ACF /* GraphStylerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		EDE36B4A1A8F38190037EA76 /* JMDUserDefaultsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMDUserDefaultsManager.m; sourceTree = "<group>"; };
 		EDE36B4F1A8F3A810037EA76 /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
 		EDE36B501A8F3B2C0037EA76 /* Const.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Const.m; sourceTree = "<group>"; };
+		EDE95F781A95BFD100726ACF /* GraphStylerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphStylerTests.m; sourceTree = "<group>"; };
 		FEDC65ED15B53819455C59DD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				ED24F0C71A8DC86600F108F4 /* UserDefaultsTests.m */,
+				EDE95F781A95BFD100726ACF /* GraphStylerTests.m */,
 				ED24F0C51A8DC86600F108F4 /* Supporting Files */,
 			);
 			path = JimdgetTests;
@@ -475,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDE36B521A8F3B2C0037EA76 /* Const.m in Sources */,
+				EDE95F791A95BFD100726ACF /* GraphStylerTests.m in Sources */,
 				EDE36B4C1A8F38190037EA76 /* JMDUserDefaultsManager.m in Sources */,
 				ED815E071A91EFFA00A2450C /* NSDate+Weekday.m in Sources */,
 				ED960CFD1A9235E500F7AADC /* JMDGraphStyler.m in Sources */,

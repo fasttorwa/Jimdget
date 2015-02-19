@@ -11,9 +11,10 @@
 #import "UIColor+MoreColor.h"
 
 
+NSString *const kGraphStyleHits = @"GraphStyleHits";
+NSString *const kGraphStyleVisits = @"GraphStyleVisits";
+
 @implementation JMDGraphStyler
-
-
 
 + (BEMSimpleLineGraphView *)styledGraph: (BEMSimpleLineGraphView *)graphView withStyle: (GraphStyle)style
 {
@@ -21,15 +22,15 @@
     switch (style)
     {
         case GraphStyleHits:
-            styleDict = [self stylesArray][0];
+            styleDict = [[self stylesMap] objectForKey: kGraphStyleHits];
             break;
-
+            
         case GraphStyleVisits:
-            styleDict = [self stylesArray][1];
+            styleDict = [[self stylesMap] objectForKey: kGraphStyleVisits];
             break;
             
         default:
-            styleDict = [self stylesArray][0];
+            styleDict = [[self stylesMap] objectForKey: kGraphStyleHits];
             break;
     }
     
@@ -61,67 +62,71 @@
 }
 
 
-+ (NSArray *)stylesArray
+# pragma mark - Styling
+
++ (NSDictionary *)stylesMap
 {
     // not complete, see BEMSimpleLineGraphView.h for more properties
-    return @[
-                // ===== Default/Hits Style =====
-                @{
-                    // Area above graph
-                    @"alphaTop"                     : @0.0,
-                    
-                    // Area below Graph
-                    @"colorBottom"                  : [UIColor jimdoLikeBlueColor],
-                    
-                    // Curve
-                    @"widthLine"                    : @2.0,
-                    @"enableBezierCurve"            : @NO,
-                    @"alwaysDisplayDots"            : @YES,
-                    @"colorLine"                    : [UIColor whiteColor],
-                    @"colorXaxisLabel"              : [UIColor lightGrayColor],
-                    @"colorYaxisLabel"              : [UIColor whiteColor],
-                    
-                    // Axis
-                    @"enableYAxisLabel"             : @YES,
-                    @"autoScaleYAxis"               : @YES,
-                    @"enableReferenceYAxisLines"    : @YES,
-                    @"enableReferenceAxisFrame"     : @YES,
-                    @"alphaBackgroundXaxis"         : @0.0,
-                    @"alphaBackgroundYaxis"         : @0.0,
-                    
-                    // Animation
-                    @"animationGraphStyle"          : @(BEMLineAnimationDraw)
-                },
-                
-                
-                // ===== Visits Style =====
-                @{
-                    // Area above graph
-                    @"alphaTop"                     : @0.0,
-                    
-                    // Area below Graph
-                    @"colorBottom"                  : [UIColor colorWithRed: 0.1 green: 0.92 blue: 0.25 alpha: 0.7],
-                    
-                    // Curve
-                    @"widthLine"                    : @3.0,
-                    @"enableBezierCurve"            : @NO,
-                    @"alwaysDisplayDots"            : @YES,
-                    @"colorLine"                    : [UIColor greenColor],
-                    @"colorXaxisLabel"              : [UIColor lightGrayColor],
-                    @"colorYaxisLabel"              : [UIColor whiteColor],
-                    
-                    // Axis
-                    @"enableYAxisLabel"             : @YES,
-                    @"autoScaleYAxis"               : @YES,
-                    @"enableReferenceYAxisLines"    : @YES,
-                    @"enableReferenceAxisFrame"     : @YES,
-                    @"alphaBackgroundXaxis"         : @0.0,
-                    @"alphaBackgroundYaxis"         : @0.0,
-                    
-                    // Animation
-                    @"animationGraphStyle"          : @(BEMLineAnimationDraw)
-                }
-            ];
+    return @{
+             // ===== Default/Hits Style =====
+             kGraphStyleHits :
+                 @{
+                     // Area above graph
+                     @"alphaTop"                     : @0.0,
+                     
+                     // Area below Graph
+                     @"colorBottom"                  : [UIColor jimdoLikeBlueColor],
+                     
+                     // Curve
+                     @"widthLine"                    : @2.0,
+                     @"enableBezierCurve"            : @NO,
+                     @"alwaysDisplayDots"            : @YES,
+                     @"colorLine"                    : [UIColor whiteColor],
+                     @"colorXaxisLabel"              : [UIColor lightGrayColor],
+                     @"colorYaxisLabel"              : [UIColor whiteColor],
+                     
+                     // Axis
+                     @"enableYAxisLabel"             : @YES,
+                     @"autoScaleYAxis"               : @YES,
+                     @"enableReferenceYAxisLines"    : @YES,
+                     @"enableReferenceAxisFrame"     : @YES,
+                     @"alphaBackgroundXaxis"         : @0.0,
+                     @"alphaBackgroundYaxis"         : @0.0,
+                     
+                     // Animation
+                     @"animationGraphStyle"          : @(BEMLineAnimationDraw)
+                  },
+             
+             
+             // ===== Visits Style =====
+             kGraphStyleVisits :
+                 @{
+                     // Area above graph
+                     @"alphaTop"                     : @0.0,
+                     
+                     // Area below Graph
+                     @"colorBottom"                  : [UIColor colorWithRed: 0.1 green: 0.92 blue: 0.25 alpha: 0.7],
+                     
+                     // Curve
+                     @"widthLine"                    : @3.0,
+                     @"enableBezierCurve"            : @NO,
+                     @"alwaysDisplayDots"            : @YES,
+                     @"colorLine"                    : [UIColor greenColor],
+                     @"colorXaxisLabel"              : [UIColor lightGrayColor],
+                     @"colorYaxisLabel"              : [UIColor whiteColor],
+                     
+                     // Axis
+                     @"enableYAxisLabel"             : @YES,
+                     @"autoScaleYAxis"               : @YES,
+                     @"enableReferenceYAxisLines"    : @YES,
+                     @"enableReferenceAxisFrame"     : @YES,
+                     @"alphaBackgroundXaxis"         : @0.0,
+                     @"alphaBackgroundYaxis"         : @0.0,
+                     
+                     // Animation
+                     @"animationGraphStyle"          : @(BEMLineAnimationDraw)
+                  }
+             };
 }
 
 @end
