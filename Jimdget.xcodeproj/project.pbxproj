@@ -19,6 +19,7 @@
 		ED24F0DE1A8DC8FD00F108F4 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED24F0DD1A8DC8FD00F108F4 /* TodayViewController.m */; };
 		ED24F0E01A8DC8FD00F108F4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED24F0DF1A8DC8FD00F108F4 /* MainInterface.storyboard */; };
 		ED24F0E31A8DC8FD00F108F4 /* JMDStatsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ED24F0D51A8DC8FD00F108F4 /* JMDStatsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ED4853301A97036F00B9F455 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED4853321A97036F00B9F455 /* Localizable.strings */; };
 		ED6F39D41A90793A000F23DA /* UIColor+MoreColor.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F39D31A90793A000F23DA /* UIColor+MoreColor.m */; };
 		ED6F39D51A90793A000F23DA /* UIColor+MoreColor.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F39D31A90793A000F23DA /* UIColor+MoreColor.m */; };
 		ED6F39D81A907FC0000F23DA /* JMDWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F39D71A907FC0000F23DA /* JMDWidgetView.m */; };
@@ -94,6 +95,10 @@
 		ED24F0DF1A8DC8FD00F108F4 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		ED24F0E81A8E1A7E00F108F4 /* Jimdget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Jimdget.entitlements; sourceTree = "<group>"; };
 		ED24F0E91A8E1B3E00F108F4 /* JMDStatsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = JMDStatsExtension.entitlements; sourceTree = "<group>"; };
+		ED48531F1A97026800B9F455 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		ED4853201A97026800B9F455 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		ED4853311A97036F00B9F455 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		ED4853331A9703B900B9F455 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ED6F39D21A90793A000F23DA /* UIColor+MoreColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MoreColor.h"; sourceTree = "<group>"; };
 		ED6F39D31A90793A000F23DA /* UIColor+MoreColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MoreColor.m"; sourceTree = "<group>"; };
 		ED6F39D61A907FC0000F23DA /* JMDWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDWidgetView.h; sourceTree = "<group>"; };
@@ -238,6 +243,7 @@
 				ED6F39D71A907FC0000F23DA /* JMDWidgetView.m */,
 				ED960CF61A92315200F7AADC /* Graphing */,
 				ED960CFA1A9235E500F7AADC /* Theming */,
+				ED48532D1A97035400B9F455 /* Localization */,
 				ED24F0DA1A8DC8FD00F108F4 /* Supporting Files */,
 			);
 			path = JMDStatsExtension;
@@ -249,6 +255,14 @@
 				ED24F0DB1A8DC8FD00F108F4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED48532D1A97035400B9F455 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				ED4853321A97036F00B9F455 /* Localizable.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		ED960CF61A92315200F7AADC /* Graphing */ = {
@@ -383,6 +397,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = ED24F09F1A8DC86600F108F4;
 			productRefGroup = ED24F0A91A8DC86600F108F4 /* Products */;
@@ -419,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED24F0E01A8DC8FD00F108F4 /* MainInterface.storyboard in Resources */,
+				ED4853301A97036F00B9F455 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +538,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				ED24F0B61A8DC86600F108F4 /* Base */,
+				ED48531F1A97026800B9F455 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -530,8 +547,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				ED24F0BB1A8DC86600F108F4 /* Base */,
+				ED4853201A97026800B9F455 /* de */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		ED4853321A97036F00B9F455 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED4853311A97036F00B9F455 /* en */,
+				ED4853331A9703B900B9F455 /* de */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -19,8 +19,8 @@
 
 + (NSDate *)yesterday
 {
-    NSTimeInterval dayInSeconds = -60 * 60 * 24;
-    return [[NSDate date] dateByAddingTimeInterval: dayInSeconds];
+    NSTimeInterval dayInSeconds = 60 * 60 * 24;
+    return [[NSDate date] dateByAddingTimeInterval: -dayInSeconds];
 }
 
 

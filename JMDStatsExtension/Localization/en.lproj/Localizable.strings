@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Jimdget
+
+  Created by Marius on 20/02/15.
+  Copyright (c) 2015 Bonsai Industries. All rights reserved.
+*/
+
+"JMDWidgetView.visitsLabel.text"    = "Visits";
+"JMDWidgetView.hitsLabel.text"      = "Hits";
