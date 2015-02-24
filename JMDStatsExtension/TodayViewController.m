@@ -17,7 +17,7 @@
 
 @interface TodayViewController () <NCWidgetProviding>
 
-
+@property (weak, nonatomic) IBOutlet UILabel *noDataLabel;
 @property JMDGraphDataProvider *hitsGraphDataProvider;
 @property JMDGraphDataProvider *visitsGraphDataProvider;
 @property JMDWidgetView *widgetView;
@@ -34,18 +34,24 @@
     self.hitsGraphDataProvider = [JMDGraphDataProvider new];
     self.visitsGraphDataProvider = [JMDGraphDataProvider new];
     
+    
     NSArray *keys = [JMDUserDefaultsManager objectForKey: kKeysKey fromStore: UserDefaultsStoreAppGroup];
     
     if (keys.count == 2)
     {
+        self.noDataLabel.hidden = YES;
+        
+        self.widgetView = [JMDWidgetView new];
         self.hitsGraphDataProvider.pointValues = [JMDUserDefaultsManager objectForKey: keys[0] fromStore: UserDefaultsStoreAppGroup];
         self.visitsGraphDataProvider.pointValues = [JMDUserDefaultsManager objectForKey: keys[1] fromStore: UserDefaultsStoreAppGroup];
+        self.widgetView.hitsGraphDataProvider = self.hitsGraphDataProvider;
+        self.widgetView.visitsGraphDataProvider = self.visitsGraphDataProvider;
+        [self.view addSubview: self.widgetView];
     }
-
-    self.widgetView = [JMDWidgetView new];
-    self.widgetView.hitsGraphDataProvider = self.hitsGraphDataProvider;
-    self.widgetView.visitsGraphDataProvider = self.visitsGraphDataProvider;
-    [self.view addSubview: self.widgetView];
+    else
+    {
+        NSLog(@"No data found in the store. Run Jimdget to generate new data.");
+    }
 }
 
 
